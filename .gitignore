@@ -1,4 +1,4 @@
-node_modules
+**/node_modules/*
 dist
 .idea
 
@@ -6,4 +6,10 @@ dist
 packages/remixapp/build
 packages/remixapp/public/build
 .env
+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
 

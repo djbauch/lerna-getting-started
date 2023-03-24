@@ -2,5 +2,11 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-  }
+    "lerna": "^6.6.1",
+    "remix": "^1.14.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "yarn@3.5.0"
 }
