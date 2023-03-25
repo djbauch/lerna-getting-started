@@ -1420,6 +1420,44 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@djbauch/footer@workspace:packages/footer":
+  version: 0.0.0-use.local
+  resolution: "@djbauch/footer@workspace:packages/footer"
+  dependencies:
+    "@testing-library/react": 13.3.0
+    "@types/jest": ^27.0.3
+    "@types/react": ^18.0.29
+    jest: ^27.4.3
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    rimraf: ^3.0.2
+    rollup: ^2.60.2
+    rollup-plugin-typescript2: ^0.31.1
+    ts-jest: ^27.1.1
+    tslib: ^2.3.1
+    typescript: ^5.0.2
+  languageName: unknown
+  linkType: soft
+
+"@djbauch/header@workspace:packages/header":
+  version: 0.0.0-use.local
+  resolution: "@djbauch/header@workspace:packages/header"
+  dependencies:
+    "@testing-library/react": 13.3.0
+    "@types/jest": ^27.0.3
+    "@types/react": ^18.0.29
+    jest: ^27.4.3
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    rimraf: ^3.0.2
+    rollup: ^2.60.2
+    rollup-plugin-typescript2: ^0.31.1
+    ts-jest: ^27.1.1
+    tslib: ^2.3.1
+    typescript: ^5.0.2
+  languageName: unknown
+  linkType: soft
+
 "@emotion/hash@npm:^0.9.0":
   version: 0.9.0
   resolution: "@emotion/hash@npm:0.9.0"
@@ -7629,24 +7667,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"footer@*, footer@workspace:packages/footer":
-  version: 0.0.0-use.local
-  resolution: "footer@workspace:packages/footer"
-  dependencies:
-    "@testing-library/react": 13.3.0
-    "@types/jest": ^27.0.3
-    "@types/react": ^18.0.29
-    jest: ^27.4.3
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    rimraf: ^3.0.2
-    rollup: ^2.60.2
-    rollup-plugin-typescript2: ^0.31.1
-    ts-jest: ^27.1.1
-    tslib: ^2.3.1
-    typescript: ^5.0.2
-  languageName: unknown
-  linkType: soft
+"footer@npm:*":
+  version: 1.0.0
+  resolution: "footer@npm:1.0.0"
+  checksum: 50348d81472bb956b9720d0f109a4d444f77baa02268c509a849046b8584764109939464443e17e189466b89d10095ae6984e372b2e2a6912a09c0d7a27be112
+  languageName: node
+  linkType: hard
 
 "for-each@npm:^0.3.3":
   version: 0.3.3
@@ -8394,24 +8420,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"header@*, header@workspace:packages/header":
-  version: 0.0.0-use.local
-  resolution: "header@workspace:packages/header"
-  dependencies:
-    "@testing-library/react": 13.3.0
-    "@types/jest": ^27.0.3
-    "@types/react": ^18.0.29
-    jest: ^27.4.3
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    rimraf: ^3.0.2
-    rollup: ^2.60.2
-    rollup-plugin-typescript2: ^0.31.1
-    ts-jest: ^27.1.1
-    tslib: ^2.3.1
-    typescript: ^5.0.2
-  languageName: unknown
-  linkType: soft
+"header@npm:*":
+  version: 0.1.1
+  resolution: "header@npm:0.1.1"
+  checksum: a638e5b2bea1b0c2f19a9d9b4c7a8a364cf2b8492add94313f88c11afd2c39db1b635fb4215ede00c22a6083f5978eb09df88cbebc1d32d08c2b234ad4d5fa51
+  languageName: node
+  linkType: hard
 
 "hosted-git-info@npm:^2.1.4":
   version: 2.8.9

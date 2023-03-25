@@ -1,5 +1,5 @@
 {
-  "name": "footer",
+  "name": "@djbauch/footer",
   "version": "1.0.1",
   "main": "dist/index.js",
   "scripts": {
@@ -22,5 +22,5 @@
   "devDependencies": {
     "rimraf": "^3.0.2"
   },
-  "gitHead": "db8243745cacf94025ca04b6bee8c3c35974adae"
+  "gitHead": "f342ce7dfb28fc4dd67b9e12c0be3db880b24c4a"
 }
