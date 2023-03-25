@@ -22,5 +22,9 @@
   "devDependencies": {
     "rimraf": "^3.0.2"
   },
-  "gitHead": "f342ce7dfb28fc4dd67b9e12c0be3db880b24c4a"
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "gitHead": "30a0b70b4d5494eaad2074fae9c1ebff3b84ad77"
 }
