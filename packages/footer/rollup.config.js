@@ -3,19 +3,18 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import postcss from 'rollup-plugin-postcss'
-
-const packageJson = require('./package.json')
+import packageJson from './package.json' assert { type: 'json' }
+//const packageJson = import('./package.json')
 export default {
   input: ['src/index.tsx'],
   output: [
     {
-      dir: 'dist',
-      entryFileNames: '[name].js',
+      file: packageJson.main,
       format: 'cjs',
-      exports: 'named'
+      exports: 'named',
+      sourcemap: true
     },
     {
-      dir: 'dist',
       file: packageJson.module,
       format: 'esm',
       sourcemap: true
