@@ -1,6 +1,6 @@
 {
   "name": "@djbauch/footer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Footer component used in the lerna tutorial",
   "type": "module",
   "main": "dist/index.js",
