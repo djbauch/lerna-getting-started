@@ -2,11 +2,22 @@
   "name": "@djbauch/header",
   "version": "1.0.3",
   "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rimraf dist && rollup --config",
     "test": "jest"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/react": "^18.0.29",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+  },
+  "devDependencies": {
     "@testing-library/react": "13.3.0",
     "@types/jest": "^27.0.3",
     "@types/react": "^18.0.29",
@@ -17,9 +28,7 @@
     "rollup-plugin-typescript2": "^0.31.1",
     "ts-jest": "^27.1.1",
     "tslib": "^2.3.1",
-    "typescript": "^5.0.2"
-  },
-  "devDependencies": {
+    "typescript": "^5.0.2",
     "rimraf": "^3.0.2"
   },
   "publishConfig": {
