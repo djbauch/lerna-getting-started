@@ -1,4 +1,8 @@
 import typescript from 'rollup-plugin-typescript2'
+import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+import resolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
+import postcss from 'rollup-plugin-postcss'
 
 const packageJson = require('./package.json')
 export default {
@@ -9,8 +13,22 @@ export default {
       entryFileNames: '[name].js',
       format: 'cjs',
       exports: 'named'
+    },
+    {
+      dir: 'dist',
+      file: packageJson.module,
+      format: 'esm',
+      sourcemap: true
     }
   ],
-  plugins: [typescript()],
+  plugins: [
+    peerDepsExternal(),
+    resolve(),
+    commonjs(),
+    typescript({ useTsconfigDeclarationDirective: true }),
+    postcss({
+      extensions: ['.css']
+    })
+  ],
   external: ['react']
 }

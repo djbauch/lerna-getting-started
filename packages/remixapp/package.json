@@ -9,11 +9,11 @@
     "test": "echo passed!"
   },
   "dependencies": {
+    "@djbauch/footer": "*",
+    "@djbauch/header": "*",
     "@remix-run/node": "^1.14.3",
     "@remix-run/react": "^1.14.3",
     "@remix-run/serve": "^1.14.3",
-    "@djbauch/footer": "*",
-    "@djbauch/header": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
