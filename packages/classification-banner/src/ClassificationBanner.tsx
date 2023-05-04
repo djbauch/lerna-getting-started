@@ -18,7 +18,7 @@ export const ClassificationBanner = ({
   dtd,
   declassifyOn
 }: ClassificationBannerProps) => {
-  if (placement === 'top' || placement === 'bottom') {
+  if (!placement || placement === 'top' || placement === 'bottom') {
     return (
       <div className={['bannerselection', placement].join(' ')} role="banner">
 
