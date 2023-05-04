@@ -1,11 +1,33 @@
 {
   "name": "root",
   "private": true,
+  "devDependencies": {
+    "@nrwl/nx-cloud": "^16.0.5",
+    "@testing-library/dom": "^9.2.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.10",
+    "@types/react-dom": "^18.0.11",
+    "jest": "^29.5.0",
+    "lerna": "^6.6.1",
+    "nx-cloud": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remix": "^1.14.3",
+    "rollup": "^3.20.2"
+  },
   "workspaces": [
     "packages/*"
   ],
-  "devDependencies": {
-    "lerna": "^6.0.1"
-  },
-  "packageManager": "yarn@3.5.1"
+  "packageManager": "yarn@3.5.0",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "nx": "^16.0.3",
+    "postcss": "^8.4.21",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2"
+  }
 }

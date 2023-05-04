@@ -1,7 +1,7 @@
 {
-  "name": "@djbauch/footer",
-  "version": "1.0.6",
-  "description": "Footer component used in the lerna tutorial",
+  "name": "@djbauch/classification-banner",
+  "version": "1.0.0",
+  "description": "Classification banner component used in the lerna experiments",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
