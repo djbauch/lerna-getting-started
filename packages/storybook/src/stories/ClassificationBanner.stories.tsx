@@ -7,7 +7,7 @@ const meta: Meta<typeof ClassificationBanner> = {
   argTypes: {
     classChoice: {
       options: ['C', 'CUI', 'S', 'U'],
-      control: { type: 'radio' }
+      control: { type: 'inline-radio' }
     },
     placement: {
       options: ['top', 'bottom', 'inner_top', 'inner_bottom'],
