@@ -1,8 +1,19 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { ClassificationBanner } from '@djbauch/classification-banner'
+
 const meta: Meta<typeof ClassificationBanner> = {
-  title: 'ClassificationBanner',
+  title: 'Classification Banner',
   component: ClassificationBanner,
+  argTypes: {
+    classChoice: {
+      options: ['C', 'CUI', 'S', 'U'],
+      control: { type: 'radio' }
+    },
+    placement: {
+      options: ['top', 'bottom', 'inner_top', 'inner_bottom'],
+      control: { type: 'radio' }
+    }
+  },
   parameters: {
     layout: 'fullscreen'
   }
