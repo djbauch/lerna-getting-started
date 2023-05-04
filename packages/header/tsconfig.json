@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
-    "jsx": "react",
     "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "strict": true,
   },
   "files": [],
   "include": [],

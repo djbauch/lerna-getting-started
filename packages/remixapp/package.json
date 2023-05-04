@@ -30,7 +30,7 @@
       "build": {
         "outputs": [
           "{projectRoot/build",
-          "{projectRoot}/pubic/build"
+          "{projectRoot}/public/build"
         ]
       }
     }
