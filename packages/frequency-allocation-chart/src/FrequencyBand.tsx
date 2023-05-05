@@ -16,7 +16,7 @@ type FrequencyBandProps = {
   showBandHeader?: boolean
 }
 
-export default function FrequencyBand({ data, min, max, band, redVerticals = false, showBandHeader = true }: FrequencyBandProps) {
+export function FrequencyBand({ data, min, max, band, redVerticals = false, showBandHeader = true }: FrequencyBandProps) {
   const [zoom, setZoom] = React.useState(100)
   const handleKeyUp = (e) => {
     if (e.key === '+') {
@@ -266,3 +266,4 @@ export default function FrequencyBand({ data, min, max, band, redVerticals = fal
     </div>
   )
 }
+export default FrequencyBand
