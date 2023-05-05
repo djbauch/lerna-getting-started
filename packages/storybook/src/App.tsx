@@ -2,7 +2,8 @@ import * as React from 'react'
 import './App.css'
 import {ClassificationBanner} from '@djbauch/classification-banner'
 import {FrequencyBand} from '@djbauch/frequency-allocation-chart'
-import '@djbauch/frequency-allocation-chart/src/FrequencyBand.scss'
+import '@djbauch/frequency-allocation-chart/dist/FrequencyBand.css'
+
 function App() {
   return (
     <div className="App">

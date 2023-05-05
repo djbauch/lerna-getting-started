@@ -36,6 +36,8 @@
     "react-dom": "^18.2.0",
     "rimraf": "^3.0.2",
     "rollup": "^3.20.2",
+    "rollup-plugin-sass": "^1.12.19",
+    "rollup-plugin-scss": "^4.0.0",
     "rollup-plugin-typescript2": "^0.34.1",
     "sass": "^1.62.1",
     "ts-jest": "^29.0.5",
