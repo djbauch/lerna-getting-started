@@ -1,4 +1,4 @@
-import { FrequencyAllocation } from 'components/FreqBands/FreqencyAllocationTable'
+import { FrequencyAllocation } from './FreqencyAllocationTable'
 
 export const buildData = (data: FrequencyAllocation[], min: number, max: number) => {
   const lbands: number[] = []
