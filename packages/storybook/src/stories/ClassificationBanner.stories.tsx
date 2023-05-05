@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { ClassificationBanner } from '@djbauch/classification-banner'
 
 const meta: Meta<typeof ClassificationBanner> = {
-  title: 'Classification Banner',
+  title: 'Kat/Classification Banner',
   component: ClassificationBanner,
   argTypes: {
     classChoice: {

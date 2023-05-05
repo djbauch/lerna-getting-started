@@ -169,3 +169,4 @@ export const ClassificationBanner = ({
     return <div></div>
   }
 }
+export default ClassificationBanner
