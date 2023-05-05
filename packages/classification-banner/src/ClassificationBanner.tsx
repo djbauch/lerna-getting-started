@@ -10,7 +10,7 @@ type ClassificationBannerProps = {
   declassifyOn?: string
 }
 
-export const ClassificationBanner = ({
+export const ClassificationBanner: React.FC<ClassificationBannerProps> = ({
   classChoice,
   placement,
   classifiedby,
