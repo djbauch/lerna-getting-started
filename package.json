@@ -24,9 +24,8 @@
   "scripts": {
     "build": "npx lerna run build",
     "graph": "npx nx graph",
-    "storybook": "cd packages/storybook && yarn storybook"
+    "storybook": "cd packages/storybook && npm run storybook"
   },
-  "packageManager": "yarn@3.5.0",
   "dependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",

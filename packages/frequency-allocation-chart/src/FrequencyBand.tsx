@@ -4,19 +4,52 @@ import { Button } from 'react-bootstrap'
 import './FrequencyBand.scss'
 import { useD3 } from 'hooks/useDthree'
 import { buildData } from './mkBands2'
+import * as FA from './FreqencyAllocationTable'
 import { colorForService, textColorForService } from './mkColor'
 import { ConvFreq } from './cnvFreq'
 
 type FrequencyBandProps = {
-  data: any
-  min: number
-  max: number
-  band: number
+  band?: number
   redVerticals?: boolean
   showBandHeader?: boolean
 }
 
-export function FrequencyBand({ data, min, max, band, redVerticals = false, showBandHeader = true }: FrequencyBandProps) {
+export const FrequencyBand: React.FC<FrequencyBandProps> = ({ band = 1, redVerticals = false, showBandHeader = true }: FrequencyBandProps) =>{
+  let data: FA.FrequencyAllocation[] = []
+  let min = 3e5
+  let max = 3e6
+  switch (band) {
+    case 2:
+      data = FA.Band3M
+      min = 3e6
+      max = 3e7
+      break
+    case 3:
+      data = FA.Band30M
+      min = 3e7
+      max = 3e8
+      break
+    case 4:
+      data = FA.Band300M
+      min = 3e8
+      max = 3e9
+      break
+    case 5:
+      data = FA.Band3G
+      min = 3e9
+      max = 3e10
+      break
+    case 6:
+      data = FA.Band30G
+      min = 3e10
+      max = 3e11
+      break
+    case 1:
+    default:
+      data = FA.Band300k
+      break
+  }
+
   const [zoom, setZoom] = React.useState(100)
   const handleKeyUp = (e) => {
     if (e.key === '+') {
@@ -236,11 +269,11 @@ export function FrequencyBand({ data, min, max, band, redVerticals = false, show
           {showControls ? (
             <div className="freq-zoom-controls" onMouseLeave={handleMouseLeave}>
               <Button size="sm" onClick={handleMinus}>
-                <b>-{' '}</b>
+                <b>- </b>
               </Button>{' '}
               Zoom: {zoom}%{' '}
               <Button size="sm" onClick={handlePlus}>
-                <b>+{' '}</b>
+                <b>+ </b>
               </Button>{' '}
             </div>
           ) : (
