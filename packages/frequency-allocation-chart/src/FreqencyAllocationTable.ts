@@ -9,7 +9,7 @@ export type FrequencyAllocation = {
   Primary_Secondary: string
 }
 
-export const frequencyAssignments: FrequencyAllocation[] = [
+export const frequencyAssignments: () => FrequencyAllocation[] = () => {return [
   {
     Radio_Service: 'Aeronautical Mobile',
     Stn_Class_Code: 'FA',
@@ -102731,11 +102731,12 @@ export const frequencyAssignments: FrequencyAllocation[] = [
     Primary_Secondary: 'Primary'
   }
 ]
+}
 
-export const Band30k = _.filter(frequencyAssignments, (it) => it.LowFreq < 3E5)
-export const Band300k = _.filter(frequencyAssignments, (it) => it.LowFreq >=  3E5 && it.LowFreq < 3E6)
-export const Band3M = _.filter(frequencyAssignments, (it) => it.LowFreq >= 3E6 && it.LowFreq < 3E7)
-export const Band30M = _.filter(frequencyAssignments, (it) => it.LowFreq >= 3E7 && it.LowFreq < 3E8)
-export const Band300M = _.filter(frequencyAssignments, (it) => it.LowFreq >= 3E8 && it.LowFreq < 3E9)
-export const Band3G = _.filter(frequencyAssignments, (it) => it.LowFreq >= 3E9 && it.LowFreq < 3E10)
-export const Band30G = _.filter(frequencyAssignments, (it) => it.LowFreq >= 3E10 && it.LowFreq < 3E11)
+export const Band30k = _.filter(frequencyAssignments(), (it) => it.LowFreq < 3E5)
+export const Band300k = _.filter(frequencyAssignments(), (it) => it.LowFreq >=  3E5 && it.LowFreq < 3E6)
+export const Band3M = _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E6 && it.LowFreq < 3E7)
+export const Band30M = _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E7 && it.LowFreq < 3E8)
+export const Band300M = _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E8 && it.LowFreq < 3E9)
+export const Band3G = _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E9 && it.LowFreq < 3E10)
+export const Band30G = _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E10 && it.LowFreq < 3E11)
