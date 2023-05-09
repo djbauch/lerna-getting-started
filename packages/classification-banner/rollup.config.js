@@ -5,7 +5,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import postcss from 'rollup-plugin-postcss'
 import packageJson from './package.json' assert { type: 'json' }
 
-export default {
+const config = {
   input: ['src/index.tsx'],
   output: [
     {
@@ -25,9 +25,15 @@ export default {
     resolve(),
     commonjs(),
     typescript({ useTsconfigDeclarationDirective: true }),
+    scss({
+      fileName: 'ClassificationBanner.css',
+      sourceMap: true,
+      verbose: true
+    }),
     postcss({
       extensions: ['.css']
     })
   ],
   external: ['react']
 }
+export default config
