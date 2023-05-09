@@ -29,6 +29,11 @@ const config = [
       resolve(),
       commonjs(),
       typescript({ useTsconfigDeclarationDirective: true }),
+      scss({
+        fileName: 'FrequencyBand.css',
+        sourceMap: true,
+        verbose: true
+      }),
       postcss({
         extensions: ['.css']
       })
