@@ -5,11 +5,11 @@ import { ClassificationBanner } from '@djbauch/classification-banner'
 const Combination = () => {
   return (
     <div>
-      <ClassificationBanner position="top"/>
+      <ClassificationBanner placement="top"/>
       <FrequencyBand band={1}/>
       <FrequencyBand band={2}/>
       <FrequencyBand band={3}/>
-      <ClassificationBanner position="bottom" />
+      <ClassificationBanner placement="bottom" />
     </div>
   )
 }

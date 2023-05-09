@@ -7,7 +7,7 @@ import '@djbauch/frequency-allocation-chart/dist/FrequencyBand.css'
 function App() {
   return (
     <div className="App">
-      <ClassificationBanner position="top"/>
+      <ClassificationBanner placement="top"/>
       <header className="App-header">
         <FrequencyBand band={1}/>
         <FrequencyBand band={2}/>
@@ -16,7 +16,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <ClassificationBanner position="bottom" />
+      <ClassificationBanner placement="bottom" />
     </div>
   )
 }

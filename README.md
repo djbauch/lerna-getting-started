@@ -6,28 +6,28 @@ Watch this [10-minute walkthrough](https://youtu.be/1oxFYphTS4Y) to see how new 
 
 This repo contains three packages or projects:
 
-- `header` (a library of React components)
-- `footer` (a library of React components)
-- `remixapp` (an app written using the Remix framework which depends on both `header` and `footer`)
+- `frequency-allocation-chart` (a library of React components)
+- `classification-banner` (a library of React components)
+- `storybook` (an app written using the Remix framework which depends on both `frequency-allocation-chart` and `classification-banner`)
 
 ```
 packages/
-    header/
+    classification-banner/
         src/
             ...
         package.json
         rollup.config.json
         jest.config.js
 
-    footer/
+    frequency-allocation-chart/
         src/
             ...
         package.json
         rollup.config.json
         jest.config.js
 
-    remixapp/
-        app/
+    storybook/
+        .storybook/
             ...
         public/
         package.json
@@ -35,3 +35,11 @@ packages/
 
 package.json
 ```
+
+## Scripts
+
+`npm run build` this runs the command `npx lerna run build`
+
+`npm run graph`
+
+`npm run storybook`
