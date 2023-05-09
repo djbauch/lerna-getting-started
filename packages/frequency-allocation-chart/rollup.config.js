@@ -4,7 +4,6 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import postcss from 'rollup-plugin-postcss'
 import scss from 'rollup-plugin-scss'
-import dts from 'rollup-plugin-dts'
 import packageJson from './package.json' assert { type: 'json' }
 
 const config = [
@@ -20,8 +19,7 @@ const config = [
       {
         file: packageJson.module,
         format: 'esm',
-        sourcemap: true,
-       // plugins: [scss({ fileName: './src/FrequencyBand.css' })]
+        sourcemap: true
       }
     ],
     plugins: [
@@ -39,11 +37,6 @@ const config = [
       })
     ],
     external: ['react']
-  },
-  // {
-  //   input: ['./dist/out-tsc/src/index.d.ts'],
-  //   output: ['./dist/index.d.ts'],
-  //   plugins: [dts()]
-  // }
+  }
 ]
 export default config
