@@ -25,7 +25,8 @@
     "build": "npx lerna run build",
     "graph": "npx nx graph",
     "storybook": "cd packages/storybook && npm run storybook",
-    "static-storybook": "cd packages/storybook && npm run static-storybook"
+    "static-storybook": "cd packages/storybook && npm run static-storybook",
+    "publish": "npx lerna publish --no-private"
   },
   "dependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
