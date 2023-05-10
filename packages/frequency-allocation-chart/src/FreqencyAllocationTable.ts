@@ -102733,10 +102733,56 @@ export const frequencyAssignments: () => FrequencyAllocation[] = () => {return [
 ]
 }
 
-export const Band30k = _.filter(frequencyAssignments(), (it) => it.LowFreq < 3E5)
-export const Band300k = _.filter(frequencyAssignments(), (it) => it.LowFreq >=  3E5 && it.LowFreq < 3E6)
-export const Band3M = _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E6 && it.LowFreq < 3E7)
-export const Band30M = _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E7 && it.LowFreq < 3E8)
-export const Band300M = _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E8 && it.LowFreq < 3E9)
-export const Band3G = _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E9 && it.LowFreq < 3E10)
-export const Band30G = _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E10 && it.LowFreq < 3E11)
+// Decade bands
+export const Band30k = () => _.filter(frequencyAssignments(), (it) => it.LowFreq < 3E5)
+export const Band300k = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >=  300E3 && it.LowFreq < 3E6)
+export const Band3M = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E6 && it.LowFreq < 3E7)
+export const Band30M = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E7 && it.LowFreq < 3E8)
+export const Band300M = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 300E6 && it.LowFreq < 3E9)
+export const Band3G = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E9 && it.LowFreq < 3E10)
+export const Band30G = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E10 && it.LowFreq < 3E11)
+
+// ITU Bands
+// Frequencies below 3Hz should be called TLF, but ITU doesn't define that
+export const BandITU_ELF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3 && it.LowFreq < 30)
+export const BandITU_SLF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 30 && it.LowFreq < 300)
+export const BandITU_ULF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 300 && it.LowFreq < 3E3)
+export const BandITU_VLF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E3 && it.LowFreq < 30E3)
+export const BandITU_LF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 30E3 && it.LowFreq < 300E3)
+export const BandITU_MF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 300E3 && it.LowFreq < 3E6)
+export const BandITU_HF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E6 && it.LowFreq < 30E6)
+export const BandITU_VHF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 30E6 && it.LowFreq < 300E6)
+export const BandITU_UHF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 300E6 && it.LowFreq < 3E9)
+export const BandITU_SHF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E9 && it.LowFreq < 30E9)
+export const BandITU_EHF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 30E9 && it.LowFreq < 300E9)
+export const BandITU_THF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 300E9 && it.LowFreq < 3E12)
+
+// IEEE Frequency Bands
+export const BandIEEE_HF = Band3M
+export const BandIEEE_VHF = Band30M
+export const BandIEEE_UHF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 300E6 && it.LowFreq < 1E9)
+export const BandIEEE_L = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 1E9 && it.LowFreq < 2E9)
+export const BandIEEE_S = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 2E9 && it.LowFreq < 4E9)
+export const BandIEEE_C = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 4E9 && it.LowFreq < 8E9)
+export const BandIEEE_X = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 8E9 && it.LowFreq < 12.4E9)
+export const BandIEEE_Ku = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 12.4E9 && it.LowFreq < 18E9)
+export const BandIEEE_K = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 18E9 && it.LowFreq < 26.5E9)
+export const BandIEEE_Ka = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 26.5E9 && it.LowFreq < 40E9)
+export const BandIEEE_Q = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 33E9 && it.LowFreq < 50E9)
+export const BandIEEE_V = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 50E9 && it.LowFreq < 75E9)
+export const BandIEEE_W = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 75E9 && it.LowFreq < 110E9)
+
+// DoD Frequency Bands
+export const BandDoDA = () => _.filter(frequencyAssignments(), (it) => it.LowFreq < 250E36)
+export const BandDoDB = () => _.fill(frequencyAssignments(), (it) => it.LowFreq >= 250E6 && it.LowFreq < 500E6)
+export const BandDoDC = () => _.fill(frequencyAssignments(), (it) => it.LowFreq >= 500E6 && it.LowFreq < 1E9)
+export const BandDoDD = () => _.fill(frequencyAssignments(), (it) => it.LowFreq >= 1E9 && it.LowFreq < 2E9)
+export const BandDoDE = () => _.fill(frequencyAssignments(), (it) => it.LowFreq >= 2E9 && it.LowFreq < 3E9)
+export const BandDoDF = () => _.fill(frequencyAssignments(), (it) => it.LowFreq >= 3E9 && it.LowFreq < 4E9)
+export const BandDoDG = () => _.fill(frequencyAssignments(), (it) => it.LowFreq >= 4E9 && it.LowFreq < 6E9)
+export const BandDoDH = () => _.fill(frequencyAssignments(), (it) => it.LowFreq >= 6E9 && it.LowFreq < 8E9)
+export const BandDoDI = () => _.fill(frequencyAssignments(), (it) => it.LowFreq >= 8E9 && it.LowFreq < 10E9)
+export const BandDoDJ = () => _.fill(frequencyAssignments(), (it) => it.LowFreq >= 10E9 && it.LowFreq < 20E9)
+export const BandDoDK = () => _.fill(frequencyAssignments(), (it) => it.LowFreq >= 20E9 && it.LowFreq < 40E9)
+export const BandDoDL = () => _.fill(frequencyAssignments(), (it) => it.LowFreq >= 40E9 && it.LowFreq < 60E9)
+export const BandDoDM = () => _.fill(frequencyAssignments(), (it) => it.LowFreq >= 60E9 && it.LowFreq < 100E9)

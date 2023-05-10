@@ -9,44 +9,147 @@ import { colorForService, textColorForService } from './mkColor'
 import { ConvFreq } from './cnvFreq'
 
 type FrequencyBandProps = {
-  band?: number
+  band?: number | string
   redVerticals?: boolean
   showBandHeader?: boolean
 }
 
-export const FrequencyBand: React.FC<FrequencyBandProps> = ({ band = 1, redVerticals = false, showBandHeader = true }: FrequencyBandProps) =>{
+export const FrequencyBand: React.FC<FrequencyBandProps> = ({
+  band = 6,
+  redVerticals = false,
+  showBandHeader = true
+}: FrequencyBandProps) => {
   let data: FA.FrequencyAllocation[] = []
   let min = 3e5
   let max = 3e6
   switch (band) {
+    case 1:
+    case 'ITU_ELF':
+      data = FA.BandITU_ELF()
+      min = 3
+      max = 30
+      break
     case 2:
-      data = FA.Band3M
-      min = 3e6
-      max = 3e7
+    case 'ITU_SLF':
+      data = FA.BandITU_SLF()
+      min = 30
+      max = 300
       break
     case 3:
-      data = FA.Band30M
-      min = 3e7
-      max = 3e8
+    case 'ITU_ULF':
+      data = FA.BandITU_ULF()
+      min = 300
+      max = 3e3
       break
     case 4:
-      data = FA.Band300M
-      min = 3e8
-      max = 3e9
+    case 'ITU_VLF':
+      data = FA.BandITU_VLF()
+      min = 3e3
+      max = 30e3
       break
     case 5:
-      data = FA.Band3G
+    case 'ITU_LF':
+      data = FA.BandITU_LF()
+      min = 30e3
+      max = 300e3
+      break
+    case 7:
+    case 'IEEE_HF':
+    case 'ITU_HF':
+      data = FA.Band3M()
+      min = 3e6
+      max = 30e6
+      break
+    case 8:
+    case 'IEEE_VHF':
+    case 'ITU_VHF':
+      data = FA.Band30M()
+      min = 30e6
+      max = 300e6
+      break
+    case 9:
+    case 'ITU_UHF':
+      data = FA.Band300M()
+      min = 300e6
+      max = 3e9
+      break
+    case 10:
+    case 'ITU_SHF':
+      data = FA.Band3G()
       min = 3e9
-      max = 3e10
+      max = 30e9
+      break
+    case 11:
+    case 'ITU_EHF':
+      data = FA.Band30G()
+      min = 30e9
+      max = 300e9
+      break
+    case 12:
+    case 'ITU_THF':
+      data = FA.BandITU_THF()
+      min = 300e9
+      max = 3e12
+      break
+    case 'IEEE_UHF':
+      data = FA.BandIEEE_UHF()
+      min = 300e6
+      max = 1e9
+      break
+    case 'IEEE_L':
+      data = FA.BandIEEE_L()
+      min = 1e9
+      max = 2e9
+      break
+    case 'IEEE_S':
+      data = FA.BandIEEE_S()
+      min = 2e9
+      max = 4e9
+      break
+    case 'IEEE_C':
+      data = FA.BandIEEE_C()
+      min = 4e9
+      max = 8e9
+      break
+    case 'IEEE_X':
+      data = FA.BandIEEE_X()
+      min = 8e9
+      max = 12.4e9
+      break
+    case 'IEEE_Ku':
+      data = FA.BandIEEE_Ku()
+      min = 12.4e9
+      max = 18e9
+      break
+    case 'IEEE_K':
+      data = FA.BandIEEE_K()
+      min = 18e9
+      max = 26.5e9
+      break
+    case 'IEEE_Ka':
+      data = FA.BandIEEE_Ka()
+      min = 26.5e9
+      max = 40e9
+      break
+    case 'IEEE_Q':
+      data = FA.BandIEEE_Q()
+      min = 33e9
+      max = 50e9
+      break
+    case 'IEEE_V':
+      data = FA.BandIEEE_V()
+      min = 50e9
+      max = 75e9
+      break
+    case 'IEEE_W':
+      data = FA.BandIEEE_W()
+      min = 75e9
+      max = 110e9
       break
     case 6:
-      data = FA.Band30G
-      min = 3e10
-      max = 3e11
-      break
-    case 1:
+    case 'ITU_MF':
     default:
-      data = FA.Band300k
+      data = FA.Band300k()
       break
   }
 

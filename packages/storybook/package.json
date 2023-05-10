@@ -21,7 +21,7 @@
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6007",
     "build-storybook": "storybook build",
-    "run-storybook": "npx http-server storybook-static -p 6016"
+    "static-storybook": "npx http-server storybook-static -p 6016"
   },
   "eslintConfig": {
     "extends": [

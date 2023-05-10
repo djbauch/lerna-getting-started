@@ -13,9 +13,9 @@ function App() {
           Learn React
         </a>
       </header>{' '}
-      <FrequencyBand band={1} />
-      <FrequencyBand band={2} />
-      <FrequencyBand band={3} />
+      <FrequencyBand band={6} />
+      <FrequencyBand band={7} />
+      <FrequencyBand band={'IEEE_UHF'} />
       <ClassificationBanner placement="bottom" />
     </div>
   )
