@@ -1,4 +1,7 @@
 import * as React from 'react'
+import '@djbauch/frequency-allocation-chart/dist/FrequencyBand.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import type { Preview } from '@storybook/react'
 import { library as iconLibrary} from '@fortawesome/fontawesome-svg-core'
 import {
@@ -17,7 +20,7 @@ import { Provider as ReduxProvider } from 'react-redux'
 import { ToastContainer } from 'react-toastify'
 
 // Import custom CSS
-import '../src/scss/styles.scss'
+//import '../src/scss/styles.scss'
 import 'react-toastify/dist/ReactToastify.css'
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
