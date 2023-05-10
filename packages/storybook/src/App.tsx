@@ -3,6 +3,7 @@ import './App.css'
 import { ClassificationBanner } from '@djbauch/classification-banner'
 import { FrequencyBand } from '@djbauch/frequency-allocation-chart'
 import '@djbauch/frequency-allocation-chart/dist/FrequencyBand.css'
+import '@djbauch/classification-banner/dist/ClassificationBanner.css'
 
 function App() {
   return (

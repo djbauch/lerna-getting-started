@@ -326,8 +326,10 @@ export const FrequencyBand: React.FC<FrequencyBandProps> = ({
         .attr('width', (d) => Scale(d.hi) - Scale(d.lo))
         .attr('y', (d) => 55 + d.tp)
         .attr('height', (d) => d.dp)
-
+        // The tooltip position must offset from the mouse position or mouseout will fire immediately
         .on('mouseover', (e, d) => {
+          const xbox = e.pageX + 4
+          const ybox = e.pageY + 4
           toolTip
             .style('background-color', colorForService(d.dt.Radio_Service))
             .style('color', textColorForService(d.dt.Radio_Service))
@@ -338,19 +340,21 @@ export const FrequencyBand: React.FC<FrequencyBandProps> = ({
                 d.dt.Primary_Secondary
               }</p></div>`
             )
-            .style('top', e.pageY + 'px')
-            .style('left', e.pageX + 'px')
+            .style('top', ybox + 'px')
+            .style('left', xbox + 'px')
             .style('opacity', 1)
         })
         .on('mousemove', (e) => {
+          const xbox = e.pageX + 4
+          const ybox = e.pageY + 4
           toolTip
             .transition()
             .duration(100)
-            .style('top', e.pageY + 'px')
-            .style('left', e.pageX + 'px')
+            .style('top', ybox + 'px')
+            .style('left', xbox + 'px')
         })
         .on('mouseout', (e) => {
-          return toolTip.transition().duration(800).style('opacity', 0)
+          return toolTip.transition().duration(1200).style('opacity', 0)
         })
     },
     [data.length]

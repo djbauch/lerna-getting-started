@@ -1,5 +1,6 @@
 import * as React from 'react'
 import '@djbauch/frequency-allocation-chart/dist/FrequencyBand.css'
+import '@djbauch/classification-banner/dist/ClassificationBanner.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import type { Preview } from '@storybook/react'
