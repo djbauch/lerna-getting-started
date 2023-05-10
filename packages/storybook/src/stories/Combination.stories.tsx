@@ -6,9 +6,10 @@ const Combination = () => {
   return (
     <div>
       <ClassificationBanner placement="top"/>
-      <FrequencyBand band={1}/>
-      <FrequencyBand band={2}/>
-      <FrequencyBand band={3}/>
+      <FrequencyBand band={6}/>
+      <FrequencyBand band={7}/>
+      <FrequencyBand band={8}/>
+      <FrequencyBand band={9}/>
       <ClassificationBanner placement="bottom" />
     </div>
   )
