@@ -315,6 +315,7 @@ export const FrequencyBand: React.FC<FrequencyBandProps> = ({
         .style('opacity', 0)
         .style('background', '#dddddd')
         .style('border', 'solid')
+        .style('text-align', 'left')
         .text('a simple tooltip')
         .style('padding', '4px')
 
