@@ -47,6 +47,11 @@ export const FrequencyBand: React.FC<FrequencyBandProps> = ({
       min = 3e3
       max = 30e3
       break
+    case 'Chart1':
+      data = FA.BandChart1()
+      min = 3e3
+      max = 300e3
+      break
     case 5:
     case 'ITU_LF':
       data = FA.BandITU_LF()
@@ -147,6 +152,7 @@ export const FrequencyBand: React.FC<FrequencyBandProps> = ({
       max = 110e9
       break
     case 6:
+    case 'Chart2':
     case 'ITU_MF':
     default:
       data = FA.Band300k()

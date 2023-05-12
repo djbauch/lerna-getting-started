@@ -102742,6 +102742,15 @@ export const Band300M = () => _.filter(frequencyAssignments(), (it) => it.LowFre
 export const Band3G = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E9 && it.LowFreq < 3E10)
 export const Band30G = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E10 && it.LowFreq < 3E11)
 
+export const Band3to300k = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3E3 && it.LowFreq < 300E3)
+export const BandChart1 = Band3to300k
+export const BandChart2 = Band300k
+export const BandChart3 = Band3M
+export const BandChart4 = Band30M
+export const BandChart5 = Band300M
+export const BandChart6 = Band3G
+export const BandChart7 = Band30G
+
 // ITU Bands
 // Frequencies below 3Hz should be called TLF, but ITU doesn't define that
 export const BandITU_ELF = () => _.filter(frequencyAssignments(), (it) => it.LowFreq >= 3 && it.LowFreq < 30)
