@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import * as d3 from 'd3'
 import { Button } from 'react-bootstrap'
 import './FrequencyBand.scss'
+import './composite-button.scss'
 import { useD3 } from 'hooks/useDthree'
 import { buildData } from './mkBands2'
 import * as FA from './FreqencyAllocationTable'
@@ -12,12 +13,14 @@ type FrequencyBandProps = {
   band?: number | string
   redVerticals?: boolean
   showBandHeader?: boolean
+  showZoomOnStart? : boolean
 }
 
 export const FrequencyBand: React.FC<FrequencyBandProps> = ({
   band = 6,
   redVerticals = false,
-  showBandHeader = true
+  showBandHeader = true,
+  showZoomOnStart = false
 }: FrequencyBandProps) => {
   let data: FA.FrequencyAllocation[] = []
   let min = 3e5
@@ -367,7 +370,7 @@ export const FrequencyBand: React.FC<FrequencyBandProps> = ({
     [data.length]
   )
 
-  const [showControls, setShowControls] = useState(false)
+  const [showControls, setShowControls] = useState(showZoomOnStart)
   const handleMouseIn = () => {
     setShowControls(true)
   }
@@ -381,14 +384,14 @@ export const FrequencyBand: React.FC<FrequencyBandProps> = ({
         <h4 className="band-header" onMouseEnter={handleMouseIn}>
           {ConvFreq(min)} - {ConvFreq(max)}
           {showControls ? (
-            <div className="freq-zoom-controls" onMouseLeave={handleMouseLeave}>
-              <Button size="sm" onClick={handleMinus}>
+            <div className="freq-zoom-controls composite-button" onMouseLeave={handleMouseLeave}>
+              <button className="zoom-buttons" onClick={handleMinus} role="button">
                 <b>- </b>
-              </Button>{' '}
+              </button>{' '}
               Zoom: {zoom}%{' '}
-              <Button size="sm" onClick={handlePlus}>
+              <button onClick={handlePlus} className="zoom-buttons" role="button">
                 <b>+ </b>
-              </Button>{' '}
+              </button>{' '}
             </div>
           ) : (
             <div />

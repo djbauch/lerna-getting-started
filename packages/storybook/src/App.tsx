@@ -16,7 +16,7 @@ function App() {
       </header>{' '}
       <FrequencyBand band={'Chart1'} />
       <FrequencyBand band={'Chart2'} />
-      <FrequencyBand band={'IEEE_UHF'} />
+      <FrequencyBand band={'Chart3'} />
       <ClassificationBanner placement="bottom" />
     </div>
   )
