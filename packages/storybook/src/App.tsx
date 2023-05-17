@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <ClassificationBanner placement="top" />
+      <ClassificationBanner tag={true} classification="TS" label="for testing only"/>Here's some text after the tag
       <header className="App-header">
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
