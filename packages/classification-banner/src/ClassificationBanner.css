@@ -2,44 +2,52 @@
   padding-top: 6px;
   padding-bottom: 6px;
   font-weight: 700;
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 95%;
+  position: relative;
+  border-radius: 5px;
+}
+
+.classification-tag {
+  font-weight: 700;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: inline-block;
 }
 
 .ucolor {
   background-color: #007a33;
   color: white;
-  display: block;
-  text-align: center;
-  margin: auto;
-  width: 95%;
-  position: relative;
-  border-radius: 5px;
 }
 
 .cuicolor {
   background-color: #502b85;
   color: white;
-  display: block;
-  text-align: center;
-  margin: auto;
-  width: 95%;
-  position: relative;
-  border-radius: 5px;
 }
 
 .ccolor {
   background-color: #0033a0;
   color: white;
-  display: block;
-  text-align: center;
-  margin: auto;
-  width: 95%;
-  position: relative;
-  border-radius: 5px;
 }
 
 .scolor {
   background-color: #c8102e;
   color: white;
+}
+
+.tscolor {
+  background-color: #ff8c00;
+  color: black;
+}
+
+.tsscicolor {
+  background-color: #fce83a;
+  color: black;
+}
+
+.inner-classification {
   display: block;
   text-align: center;
   margin: auto;
@@ -48,52 +56,35 @@
   border-radius: 5px;
 }
 
-/*inner classification*/
-.inner_ucolor {
+.inner-ucolor {
   color: #007a33;
-  display: block;
-  text-align: center;
-  margin: auto;
-  width: 95%;
-  position: relative;
-  border-radius: 5px;
 }
 
-.inner_cuicolor {
+.inner-cuicolor {
   color: #502b85;
-  display: block;
-  text-align: center;
-  margin: auto;
-  width: 95%;
-  position: relative;
-  border-radius: 5px;
 }
 
-.inner_ccolor {
+.inner-ccolor {
   color: #0033a0;
-  display: block;
-  text-align: center;
-  margin: auto;
-  width: 95%;
-  position: relative;
-  border-radius: 5px;
 }
 
-.inner_scolor {
+.inner-scolor {
   color: #c8102e;
-  display: block;
-  text-align: center;
-  margin: auto;
-  width: 95%;
-  position: relative;
-  border-radius: 5px;
 }
 
-.class_svg {
+.inner-tscolor {
+  color: #ff8c00;
+}
+
+.inner-tsscicolor {
+  color: #fce83a;
+}
+
+.class-svg {
   background-color: black;
 }
 
-.inner_authority {
+.inner-authority {
   text-align: left;
   size: 14px;
 }

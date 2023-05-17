@@ -56,7 +56,7 @@ const preview: Preview = {
       }
     },
     backgrounds: {
-      default: 'Plum',
+      default: 'AliceBlue',
       values: [
         {
           name: 'White',
