@@ -11,7 +11,8 @@ const config = {
   output: [
     {
       file: packageJson.main,
-      format: 'cjs',
+      format: 'umd',
+      name: 'ClassificationBanner',
       exports: 'named',
       sourcemap: true
     },
