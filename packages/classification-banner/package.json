@@ -1,6 +1,6 @@
 {
   "name": "@djbauch/classification-banner",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Classification banner component used in the lerna experiments",
   "type": "module",
   "main": "dist/index.js",
