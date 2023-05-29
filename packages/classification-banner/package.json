@@ -4,6 +4,7 @@
   "description": "Classification banner component used in the lerna experiments",
   "type": "module",
   "main": "dist/index.js",
+  "browser": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
