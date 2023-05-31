@@ -1,13 +1,17 @@
 import typescript from 'rollup-plugin-typescript2'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
-import resolve from '@rollup/plugin-node-resolve'
+import nodeResolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import postcss from 'rollup-plugin-postcss'
 import scss from 'rollup-plugin-scss'
 import packageJson from './package.json' assert { type: 'json' }
 
+const env =  process.env.NODE_ENV
+const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json']
+
 const config = {
-  input: ['src/index.tsx'],
+  input: ['src/index.ts'],
+  external: Object.keys(packageJson.peerDependencies || {}).concat('react-dom'),
   output: [
     {
       file: packageJson.main,
@@ -23,7 +27,7 @@ const config = {
   ],
   plugins: [
     peerDepsExternal(),
-    resolve(),
+    nodeResolve(),
     commonjs(),
     typescript({ useTsconfigDeclarationDirective: true }),
     scss({
@@ -32,9 +36,10 @@ const config = {
       verbose: true
     }),
     postcss({
-      extensions: ['.css']
+      extensions: ['.css'],
+      sourceMap: true
     })
   ],
-  external: ['react']
+  //external: ['react']
 }
 export default config

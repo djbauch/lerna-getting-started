@@ -1,7 +1,7 @@
 import * as React from 'react'
 import './ClassificationBanner.css'
 
-interface ClassificationBannerProps {
+export interface ClassificationBannerProps {
   classification?: string
   placement?: 'top' | 'bottom' | 'inner_top' | 'inner_bottom'
   classifiedby?: string
