@@ -9,6 +9,7 @@
     "isolatedModules": true,
     "jsx": "react",
     "noImplicitAny": false,
+    "resolveJsonModule": true,
     "strict": true,
 },
   "files": [],

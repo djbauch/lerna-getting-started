@@ -10,6 +10,7 @@
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.10",
     "@types/react-dom": "^18.0.11",
+    "@types/rollup-plugin-peer-deps-external": "^2.2.1",
     "jest": "^29.5.0",
     "lerna": "^6.6.2",
     "nx-cloud": "latest",
@@ -35,6 +36,7 @@
     "nx": "^16.0.3",
     "postcss": "^8.4.21",
     "react-bootstrap": "^2.7.4",
+    "react-refresh": "^0.14.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2"
   }
