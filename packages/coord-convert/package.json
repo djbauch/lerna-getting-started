@@ -1,6 +1,6 @@
 {
   "name": "@djbauch/coordinate-converter",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Decimal degrees to Degrees, Minutes, Seconds",
   "type": "module",
   "main": "dist/index.js",
