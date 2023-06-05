@@ -3,12 +3,12 @@
   "version": "1.0.22",
   "description": "Decimal degrees to Degrees, Minutes, Seconds",
   "exports": {
-    "import": "./dist/index.esm.mjs",
+    "import": "./dist/index.esm.js",
     "require": "./dist/index.cjs"
   },
   "type": "module",
   "main": "dist/index.cjs",
-  "module": "dist/index.esm.mjs",
+  "module": "dist/index.esm.js",
   "browser": "dist/index.cjs",
   "types": "dist/index.d.ts",
   "files": [
