@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import DMSDisplay from './DMSDisplay'
 import { Button } from 'react-bootstrap'
-import '~react-bootstrap/dist/react-bootstrap.min.css'
+import 'react-bootstrap/dist/react-bootstrap.min.css'
 import './CoordConvert.scss'
 import { ToastContainer, toast } from 'react-toastify'
-import '~react-toastify/dist/ReactToastify.css'
+import 'react-toastify/dist/ReactToastify.css'
 
 export const CoordConvert = () => {
   const [lat, setLat] = useState('')
