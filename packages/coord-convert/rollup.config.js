@@ -12,7 +12,7 @@ const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json']
 const config = [
   {
     input: ['src/index.ts'],
-    exxternal: Object.keys(packageJson.peerDependencies || {'react-dom': 'n/a'}),
+    external: Object.keys(packageJson.peerDependencies || {'react-dom': 'n/a'}),
     output: [
       {
         file: packageJson.main,
