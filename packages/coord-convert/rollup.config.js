@@ -27,7 +27,7 @@ const config = [
       }
     ],
     plugins: [
-      peerDepsExternal(),
+      //peerDepsExternal(),
       nodeResolve(),
       commonjs(),
       typescript({ useTsconfigDeclarationDirective: true }),
