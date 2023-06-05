@@ -2,10 +2,14 @@
   "name": "@djbauch/coordinate-converter",
   "version": "1.0.20",
   "description": "Decimal degrees to Degrees, Minutes, Seconds",
+  "exports": {
+    "import": "./dist/index.esm.js",
+    "require": "./dist/index.js"
+  },
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "browser": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.esm.mjs",
+  "browser": "dist/index.cjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist/*.css",
@@ -53,5 +57,8 @@
     "access": "public",
     "tag": "latest"
   },
-  "gitHead": "30a0b70b4d5494eaad2074fae9c1ebff3b84ad77"
+  "gitHead": "30a0b70b4d5494eaad2074fae9c1ebff3b84ad77",
+  "dependencies": {
+    "rollup-plugin-import-css": "^3.2.1"
+  }
 }

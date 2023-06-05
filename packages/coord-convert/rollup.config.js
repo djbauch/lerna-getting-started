@@ -2,6 +2,7 @@ import typescript from 'rollup-plugin-typescript2'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
+import importCss from 'rollup-plugin-import-css'
 import postcss from 'rollup-plugin-postcss'
 import scss from 'rollup-plugin-scss'
 import packageJson from './package.json' assert { type: 'json' }
@@ -27,10 +28,12 @@ const config = [
       }
     ],
     plugins: [
-      //peerDepsExternal(),
+      peerDepsExternal(),
       nodeResolve(),
-      commonjs(),
+      importCss(),
+            commonjs(),
       typescript({ useTsconfigDeclarationDirective: true }),
+
       scss({
         fileName: 'CoordConvert.css',
         sourceMap: true,
