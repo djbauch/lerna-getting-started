@@ -1,6 +1,6 @@
 {
   "name": "@djbauch/dms-convert",
-  "version": "1.0.12",
+  "version": "1.0.26",
   "description": "Degrees, Minutes, Seconds to Decimal degrees",
   "type": "module",
   "main": "dist/index.cjs",
