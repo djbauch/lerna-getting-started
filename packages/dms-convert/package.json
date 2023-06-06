@@ -3,14 +3,15 @@
   "version": "1.0.26",
   "description": "Degrees, Minutes, Seconds to Decimal degrees",
   "type": "module",
-  "main": "dist/index.cjs",
+  "main": "dist/index.js",
   "module": "dist/index.esm.js",
-  "browser": "dist/index.cjs",
+  "browser": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist/*.css",
     "dist/*.d.ts",
     "dist/*.js",
+    "dist/*.cjs",
     "dist/*.map"
   ],
   "scripts": {

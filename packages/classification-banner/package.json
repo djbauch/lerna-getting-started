@@ -11,6 +11,7 @@
     "dist/*.css",
     "dist/*.d.ts",
     "dist/*.js",
+    "dist/*.cjs",
     "dist/*.map"
   ],
   "scripts": {
