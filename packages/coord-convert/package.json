@@ -3,8 +3,14 @@
   "version": "1.0.23",
   "description": "Decimal degrees to Degrees, Minutes, Seconds",
   "exports": {
-    "import": "./dist/index.esm.js",
-    "require": "./dist/index.cjs"
+    ".": "./dist/index.esm.js",
+    "./dist/*.js": "./dist/*.js",
+    "./dist/*.cjs": "./dist/*.cjs",
+    "./dist/*.mjs": "./dist/*.mjs",
+    "./dist/*.d.ts": "./dist/*.d.ts",
+    "./dist/*.css": "./dist/*.css",
+    "./dist/*.map": "./dist/*.map",
+    "./package.json": "./package.json"
   },
   "type": "module",
   "main": "dist/index.cjs",
@@ -22,10 +28,10 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.7.4",
-    "react-dom": "^18.2.0",
-    "react-toastify": "^9.1.2"
+    "react": ">=16.8.0",
+    "react-bootstrap": ">=2.7.4",
+    "react-dom": ">=16.8.0",
+    "react-toastify": ">=9.1.2"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.0",
