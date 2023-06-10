@@ -1,6 +1,6 @@
 {
   "name": "@djbauch/frequency-allocation-chart",
-  "version": "1.0.12",
+  "version": "1.0.24",
   "description": "Frequency allocation chart band for radio spectrum",
   "type": "module",
   "main": "dist/index.js",

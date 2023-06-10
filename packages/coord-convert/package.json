@@ -1,6 +1,6 @@
 {
   "name": "@djbauch/coordinate-converter",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "Decimal degrees to Degrees, Minutes, Seconds",
   "exports": {
     ".": "./dist/index.esm.js",
