@@ -1,4 +1,4 @@
-![demo](docs/assets/banners.png?raw=true)
+![sample](https://raw.githubusercontent.com/djbauch/lerna-getting-started/main/packages/classification-banner/docs/assets/banners.png)
 
 ## Overview
 
