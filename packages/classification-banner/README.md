@@ -22,7 +22,7 @@ import '@djbauch/classification-banner/dist/ClassificationBanner.css'
 &hellip; and add the JSX to use the component in your `render` function:
 
 ```jsx
-<ClassificationBanner placement="top" classification="U">
+<ClassificationBanner placement="top" classification="U" />
 ```
 
-CodeSandbox example: https://codesandbox.io/p/sandbox/nervous-fermi-932hvk
+CodeSandbox example: https://codesandbox.io/p/sandbox/classification-banner-932hvk
