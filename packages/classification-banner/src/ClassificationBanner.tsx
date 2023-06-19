@@ -23,7 +23,8 @@ export const ClassificationBanner: React.FC<ClassificationBannerProps> = ({
   label = ''
 }: ClassificationBannerProps) => {
   if (tag) {
-    label = label ? label.toUpperCase() : ''
+    label = label ? (label.startsWith('/') ? label.toUpperCase()
+     : ' ' + label) : ''
     switch (classification) {
       case 'C':
         return <span className="classification-tag ccolor">C{label}</span>
